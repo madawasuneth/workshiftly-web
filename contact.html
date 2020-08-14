@@ -443,7 +443,7 @@
                 var form = $(this);
                 $.ajax({
                     type: "POST",
-                    url: "http://124.43.9.63:8011/api/email/send-contact-mail",
+                    url: "https://workshiftly.com/api/email/send-contact-mail",
                     data: form.serialize(),
                     success: function (data) {
                         $('#form-succ-msg-box').show();
