@@ -19,11 +19,13 @@
             <!-- Bootstrap Style sheet-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+            <!-- Jquery ajax -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
             <!--Bootstrap js link-->
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
         <style>
             body {
                 font-family: 'Roboto', sans-serif;
@@ -189,12 +191,16 @@
                 font-weight: bold;
             }
 
+            .footer-links-align {
+                float: right !important;
+            }
+
+            .hide-msg-box {
+                display: none;
+            }
+
             /* --- Extra large devices (large desktops, 1200px and up) - (xl) --- */
              @media (min-width: 1200px) {
-                .requirement-topic-container{
-                    padding-left:4rem !important;
-                }
-
                 .package-label{
                     margin-top: -45px;
                 }
@@ -202,10 +208,6 @@
 
             /* --- Large devices (desktops, 992px and 1199px) - (lg) --- */
             @media (min-width: 992px) and (max-width: 1199.98px) {
-                .requirement-topic-container{
-                    padding-left:2.9rem !important;
-                }
-
                 .package-label{
                     margin-top: -45px;
                 }
@@ -213,23 +215,26 @@
 
             /* --- Medium Devices (tablets, 768px and up) - (md) --- */
             @media (min-width: 768px) and (max-width: 991.98px) {
-                .requirement-topic-container{
-                    margin-left:2.1rem !important;
-                }
-
                 .package-label{
                     margin-top: -40px;
+                }
+
+                .download-cards {
+                    /* height: 100% !important; */
+                    padding-bottom: 20px;
                 }
             }
 
             /* --- Small Devices (landscape phones, 576px and up) - (sm) --- */
             @media (min-width: 576px) and (max-width: 767.98px) {
-                .requirement-topic-container{
-                    margin-left:2.5rem !important;
-                }
-
                 .package-label{
                     margin-top: -40px;
+                }
+
+                .footer-links-align {
+                    float: none !important;
+                    -webkit-box-pack: center !important;
+                    justify-content: center !important;
                 }
             }
 
@@ -237,6 +242,21 @@
             @media (max-width: 575.98px) {
                 .package-label{
                     margin-top: -35px;
+                }
+
+                .btn-download {
+                    font-size: 70%;
+                }
+
+                .download-cards {
+                    height: 50% !important;
+                    padding-bottom: 20px;
+                }
+
+                .footer-links-align {
+                    float: none !important;
+                    -webkit-box-pack: center !important;
+                    justify-content: center !important;
                 }
             }
         </style>
@@ -248,7 +268,7 @@
     <!-- Banner Content Start-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 col-sm-12 pt-5 px-0 col-sm-12 banner-download">
+            <div class="col-md-12 col-sm-12 pt-5 mt-5 px-0 col-sm-12 banner-download">
                 <h1 class="text-white text-center font-35 mt-5 banner-topic">Downloads</h1>
             </div>
         </div>
@@ -262,7 +282,7 @@
                 <div class="row h-100 justify-content-center align-items-center mb-5 mt-5">
                     <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 d-none d-sm-block">
                         <div class="progress left-progress float-right" style="height: 3px; width: 90%">
-                            <div class="progress-bar bg-dark-yellow" role="progressbar" style="width: 42%; height: 3px" area-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-dark-yellow" role="progressbar" style="width: 100%; height: 3px" area-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
@@ -270,7 +290,7 @@
                     </div>
                     <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 d-none d-sm-block">
                         <div class="progress float-left" style="height: 3px; width: 90%">
-                            <div class="progress-bar bg-dark-yellow" role="progressbar" style="width: 42%; height: 3px" area-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-dark-yellow" role="progressbar" style="width: 100%; height: 3px" area-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -281,9 +301,9 @@
                                 <img src="images/img-window.png" class="download-images img-fluid" alt="identification"/>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
-                                <button type="button" class="btn-download py-1 ">
-                                    Download for Windows
-                                </button>
+                                <a href="https://thinkcubeconnect-my.sharepoint.com/:u:/g/personal/akmal_thinkcubeconnect_io/EWws56et0cpBt8_g2FOUB_AByY637qZuEQ7paCJ_X1fmBg?e=4%3aAAWhkS&at=9">
+                                    <button type="button" class="btn-download py-1">Download for Windows</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -293,7 +313,9 @@
                                 <img src="images/img-linux.png" class="download-images img-fluid" alt="identification"/>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
-                                <button type="button" class="btn-download py-1">Download for Linux</button>
+                                <a href="https://thinkcubeconnect-my.sharepoint.com/:u:/g/personal/shamil_thinkcubeconnect_io/EYKKPO87AzhGijutn4UJB28BA6b2wAMNgoock27RjdaItQ?e=9veyml">
+                                    <button type="button" class="btn-download py-1">Download for Linux</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -314,17 +336,17 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-5">
                 <ul class="requirement-links float-lg-right">
                     <li class="requirement-topic"><h5>Minimum Requirements for Windows </h5></li>
-                    <li class="ml-5">Windows 7 SP1 or Above</li>
-                    <li class="ml-5">RAM 2GB</li>
-                    <li class="ml-5">Disk Space: 250 MB for JRE; 2 MB for Java Update, the client tool</li>
-                    <li class="ml-5">Processor: Minimum Due Core Processor</li>
+                    <li class="ml-md-5">Windows 7 SP1 or Above</li>
+                    <li class="ml-md-5">RAM 2GB</li>
+                    <li class="ml-md-5">Disk Space: 250 MB for JRE; 2 MB for Java Update, the client tool</li>
+                    <li class="ml-md-5">Processor: Minimum Due Core Processor</li>
                 </ul>
                 <ul class="requirement-links pt-3 float-lg-right">
                     <li class="requirement-topic"><h5>Minimum Requirements for Linux  </h5></li>
-                    <li class="ml-5">Ubuntu Linux 15.04 (8u45 and above)</li>
-                    <li class="ml-5">RAM 2GB</li>
-                    <li class="ml-5">Disk Space: 250 MB for JRE; 2 MB for Java Update, the client tool</li>
-                    <li class="ml-5">Processor: Minimum Due Core Processor</li>
+                    <li class="ml-md-5">Ubuntu Linux 15.04 (8u45 and above)</li>
+                    <li class="ml-md-5">RAM 2GB</li>
+                    <li class="ml-md-5">Disk Space: 250 MB for JRE; 2 MB for Java Update, the client tool</li>
+                    <li class="ml-md-5">Processor: Minimum Due Core Processor</li>
                 </ul>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-5">
@@ -335,34 +357,44 @@
     <!-- Installing Details End-->
 
     <!-- More Details Start -->
-    <div class="container-fluid px-5">
+    <div class="container-fluid px-4">
         <div class="row h-100 justify-content-center align-items-center pt-5 my-5">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-4">
+            <div class="align-content-center justify-content-center col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-4 px-sm-4">
                 <img src="images/img-login-ui.png" class="img-login-ui img-fluid"/>
             </div>
-            <div class="row col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="row align-content-center justify-content-center col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <h3 class="">Need More Support ?</h3>
+                        <h3 class="px-0 mx-0">Need More Support ?</h3>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="progress mt-2" style="height: 3px; width: 100%">
-                            <div class="progress-bar bg-dark-yellow" role="progressbar" style="width: 42%; height: 3px" area-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-dark-yellow" role="progressbar" style="width: 100%; height: 3px" area-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
-                <form class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-4">
+                <form class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-4" id="support-form">
                     <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <input type="text" class="form-control" name="name" placeholder="Your name here *">
+                        <input type="text" class="form-control" name="name" placeholder="Your name here *" required>
                     </div>
                     <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <input type="text" class="form-control" name="email" placeholder="Your email here *">
+                        <input type="text" class="form-control" name="email" placeholder="Your email here *" required>
                     </div>
                     <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <textarea class="form-control" placeholder="Your message here *" style="height: 6rem"></textarea>
+                        <textarea class="form-control" name="message" placeholder="Your message here *" style="height: 6rem" required></textarea>
                     </div>
                     <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <button type="submit" class="px-5 py-2 mt-5 float-right bg-dark-yellow font-dark-gray btn-support">Submit</button>
+                        <button id="form-submit" type="submit" class="px-5 py-2 mt-xl-5 float-right bg-dark-yellow font-dark-gray btn-support">Submit</button>
+                    </div>
+                    <div class="form-group hide-msg-box" id="form-succ-msg-box">
+                        <div class="alert alert-success" role="alert">
+                            Form has been submited.
+                        </div>
+                    </div>
+                    <div class="form-group hide-msg-box" id="form-err-msg-box">
+                        <div class="alert alert-danger" role="alert">
+                            Error occurred please try again later.
+                        </div>
                     </div>
                 </form>
             </div>
@@ -372,31 +404,51 @@
 
     <!-- Footer Start-->
     <div class="container-fluid bg-dark-gray">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <p class="text-white font-8 ml-5 pl-3 mr-1 my-3 footer footer-links copyright-links copyright">
-                    Copyright<i class=" fa fa-copyright"></i> <span><a class="px-1 font-dark-yellow" href="#">Workshiftly</a> 2020</span>
-                </p>
+        <div class="row px-4">
+            <div
+                class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 py-3 text-white footer-links footer copyright-links copyright copyright-align">
+                Copyright@ <span><a class="px-1 font-dark-yellow" href="index.html">Workshiftly</a> 2020</span>
             </div>
-            <div class="col-md-8 col-sm-12">
-                <nav class="nav justify-content-end text-white my-2 footer footer-links">
-                    <a href="eula.html" class="nav-item nav-link text-white mr-3">EULA</a>
-                    <a href="refund.html" class="nav-item nav-link text-white mr-3">Refund policy</a>
-                    <a href="#" class="nav-item nav-link text-white mr-3">Terms of Services</a>
-                    <a href="faq.html" class="nav-item nav-link text-white mr-5">FAQs</a>
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12 py-2">
+                <nav
+                    class="nav text-white footer footer-links footer-right-links footer-links-align footer-link-vertical-align">
+                    <a href="eula.html" class="nav-item nav-link text-white">EULA</a>
+                    <a href="refund.html" class="nav-item nav-link text-white">Refund policy</a>
+                    <a href="#" class="nav-item nav-link text-white">Terms of Services</a>
+                    <a href="faq.html" class="nav-item nav-link text-white">FAQs</a>
                 </nav>
             </div>
         </div>
     </div>
     <!-- Footer End-->
+    <script>
+        $(document).ready(function () {
+            $("#support-form").submit(function (e) {
+                e.preventDefault();
+                $('#form-submit').prop('disabled', true);
+                var form = $(this);
+                $.ajax({
+                    type: "POST",
+                    url: "http://124.43.9.63:8011/api/email/send-contact-mail",
+                    data: form.serialize(),
+                    success: function (data) {
+                        $('#form-succ-msg-box').show();
+                        setTimeout(function () {
+                            $('#form-succ-msg-box').hide();
+                            $("#support-form").find("input[type=text], input[type=email], textarea").val("");
+                            $('#form-submit').prop('disabled', false);
+                        }, 2500);
+                    },
+                    error: function (data) {
+                        $('#form-err-msg-box').show();
+                        setTimeout(function () {
+                            $('#form-err-msg-box').hide();
+                            $('#form-submit').prop('disabled', false);
+                        }, 2500);
+                    }
+                });
+            });
+        });
+    </script>
     </body>
-</html><html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
-                <script type="text/javascript">
-                 var gearPage = document.getElementById('GearPage');
-                 if(null != gearPage)
-                 {
-                     gearPage.parentNode.removeChild(gearPage);
-                     document.title = "Error";
-                 }
-                 </script>
-                 </html>
+</html>
