@@ -210,6 +210,19 @@
             display: none;
         }
 
+        .footer-links-align {
+            float: right !important;
+        }
+
+        @media only screen and (max-width: 453px) {
+            .footer-link-vertical-align {
+                -webkit-box-orient: vertical !important;
+                -webkit-box-direction: normal !important;
+                flex-direction: column !important;
+                text-align: center;
+            }
+        }
+
         @media only screen and (max-width: 520px) {
             .img-get-connect {
                 display: none;
@@ -243,7 +256,16 @@
                 text-align: center;
                 padding-left: 2rem !important;
                 padding-right: 2rem !important;
+            }
 
+            .copyright-align {
+                text-align: center;
+            }
+
+            .footer-links-align {
+                float: none !important;
+                -webkit-box-pack: center !important;
+                justify-content: center !important;
             }
         }
 
@@ -393,19 +415,18 @@
 
     <!-- Footer Start-->
     <div class="container-fluid bg-dark-gray">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <p class="text-white font-8 ml-5 pl-3 mr-1 my-3 footer footer-links copyright-links copyright">
-                    Copyright<i class=" fa fa-copyright"></i> <span><a class="px-1 font-dark-yellow"
-                            href="#">Workshiftly</a> 2020</span>
-                </p>
+        <div class="row px-4">
+            <div
+                class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 py-3 text-white footer-links footer copyright-links copyright copyright-align">
+                Copyright@ <span><a class="px-1 font-dark-yellow" href="index.html">Workshiftly</a> 2020</span>
             </div>
-            <div class="col-md-8 col-sm-12">
-                <nav class="nav justify-content-end text-white my-2 footer footer-links">
-                    <a href="eula.html" class="nav-item nav-link text-white mr-3">EULA</a>
-                    <a href="refund.html" class="nav-item nav-link text-white mr-3">Refund policy</a>
-                    <a href="#" class="nav-item nav-link text-white mr-3">Terms of Services</a>
-                    <a href="faq.html" class="nav-item nav-link text-white mr-5">FAQs</a>
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12 py-2">
+                <nav
+                    class="nav text-white footer footer-links footer-right-links footer-links-align footer-link-vertical-align">
+                    <a href="eula.html" class="nav-item nav-link text-white">EULA</a>
+                    <a href="refund.html" class="nav-item nav-link text-white">Refund policy</a>
+                    <a href="#" class="nav-item nav-link text-white">Terms of Services</a>
+                    <a href="faq.html" class="nav-item nav-link text-white">FAQs</a>
                 </nav>
             </div>
         </div>
