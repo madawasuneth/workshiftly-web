@@ -252,11 +252,26 @@
                     height: 50% !important;
                     padding-bottom: 20px;
                 }
+            }
 
+            @media only screen and (max-width: 453px) {
+                .footer-link-vertical-align {
+                    -webkit-box-orient: vertical !important;
+                    -webkit-box-direction: normal !important;
+                    flex-direction: column !important;
+                    text-align: center;
+                }
+            }
+
+            @media only screen and (max-width: 767px) {
                 .footer-links-align {
                     float: none !important;
                     -webkit-box-pack: center !important;
                     justify-content: center !important;
+                }
+
+                .copyright-align {
+                    text-align: center;
                 }
             }
         </style>
@@ -269,7 +284,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-sm-12 pt-5 mt-5 px-0 col-sm-12 banner-download">
-                <h1 class="text-white text-center font-35 mt-5 banner-topic">Downloads</h1>
+                <h1 class="text-white text-center font-35 mt-5 pt-4 banner-topic">Downloads</h1>
             </div>
         </div>
     </div>
@@ -410,15 +425,14 @@
                 Copyright@ <span><a class="px-1 font-dark-yellow" href="index.html">Workshiftly</a> 2020</span>
             </div>
             <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12 py-2">
-                <nav class="nav justify-content-end text-white my-2 footer footer-links">
-                    <a href="https://workshiftly.com/#/eula" target="_top"
-                        class="nav-item nav-link text-white mr-3">EULA</a>
-                    <a href="https://workshiftly.com/#/refund" target="_top"
-                        class="nav-item nav-link text-white mr-3">Refund policy</a>
-                    <a href="https://workshiftly.com" target="_top" class="nav-item nav-link text-white mr-3">Terms of
+                <nav
+                    class="nav text-white footer footer-links footer-right-links footer-links-align footer-link-vertical-align">
+                    <a href="https://workshiftly.com/#/eula" target="_top" class="nav-item nav-link text-white">EULA</a>
+                    <a href="https://workshiftly.com/#/refund" target="_top" class="nav-item nav-link text-white">Refund
+                        policy</a>
+                    <a href="https://workshiftly.com" target="_top" class="nav-item nav-link text-white">Terms of
                         Services</a>
-                    <a href="https://workshiftly.com/#/faq" target="_top"
-                        class="nav-item nav-link text-white mr-5">FAQs</a>
+                    <a href="https://workshiftly.com/#/faq" target="_top" class="nav-item nav-link text-white">FAQs</a>
                 </nav>
             </div>
         </div>
