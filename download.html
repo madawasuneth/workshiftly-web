@@ -138,8 +138,8 @@
 
             .img-login-ui{
                 background-size: cover;
-                height: 24rem;
-                width: 100%;
+                /* height: 24rem; */
+                size: 100%;
             }
 
             .requirement-links{
@@ -169,10 +169,10 @@
                 width: 38%;
             }
 
-            .requirement-image{
+            /* .requirement-image{
                 width: 70%;
                 height: 90%;
-            }
+            } */
 
             .btn-download{
                 border: 0.1rem solid #0D0D0C;
@@ -188,8 +188,9 @@
                 background-color: #F29F05;
                 font-weight: bold;
             }
+
             /* --- Extra large devices (large desktops, 1200px and up) - (xl) --- */
-                        @media (min-width: 1200px) {
+             @media (min-width: 1200px) {
                 .requirement-topic-container{
                     padding-left:4rem !important;
                 }
@@ -242,40 +243,6 @@
         </head>
     <body>
     <!-- Header Start-->
-    <div class="container-fluid bg-dark-gray">
-        <div class="row">
-            <div class="col-md-3 pt-2">
-                <img class="header-logo ml-5 mt-1" src="images/img-logo.png"/>
-            </div>
-            <div class="col-md-8 col-sm-12 top-navigation">
-                <nav class="navbar navbar-expand-lg navbar-light float-right py-0 top-nav" id="top-nav">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav nav">
-                            <li class="nav-item">
-                                <a class="nav-link text-white mr-5" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link text-white mr-5" href="download.html">Download</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mr-5" href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link pr-0" href="contactUs.html">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="btn text-center btn-login bg-dark-yellow col-md-1 col-sm-2 col-2 justify-content-end px-0">
-                <i class="fa fa-user-o pr-1" aria-hidden="true"></i>
-                Login
-            </div>
-        </div>
-    </div>
     <!-- Header End-->
 
     <!-- Banner Content Start-->
@@ -293,35 +260,37 @@
         <div class="row h-100 justify-content-center align-items-center">
             <div class="h-100 justify-content-center align-items-center col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="row h-100 justify-content-center align-items-center mb-5 mt-5">
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 d-none d-sm-block">
                         <div class="progress left-progress float-right" style="height: 3px; width: 90%">
                             <div class="progress-bar bg-dark-yellow" role="progressbar" style="width: 42%; height: 3px" area-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
                         <h4>Desktop Version</h4>
                     </div>
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 d-none d-sm-block">
                         <div class="progress float-left" style="height: 3px; width: 90%">
                             <div class="progress-bar bg-dark-yellow" role="progressbar" style="width: 42%; height: 3px" area-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row h-100 justify-content-center align-items-center mb-5">
-                    <div class="row h-100 justify-content-center align-items-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto my-auto">
+                    <div class="row h-auto justify-content-center align-items-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto mb-4 mb-md-0">
                         <div class="bg-white text-center download-cards pt-5">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                <img src="images/img-window.png" class="download-images mt-2" alt="identification"/>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 h-50">
+                                <img src="images/img-window.png" class="download-images img-fluid" alt="identification"/>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
-                                <button type="button" class="btn-download py-1 mt-1">Download for Windows</button>
+                                <button type="button" class="btn-download py-1 ">
+                                    Download for Windows
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-center align-items-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto my-auto">
+                    <div class="row h-auto justify-content-center align-items-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto">
                         <div class="bg-white text-center download-cards pt-5">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                <img src="images/img-linux.png" class="download-images" alt="identification"/>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 h-50">
+                                <img src="images/img-linux.png" class="download-images img-fluid" alt="identification"/>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
                                 <button type="button" class="btn-download py-1">Download for Linux</button>
@@ -359,7 +328,7 @@
                 </ul>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-5">
-                <img src="images/img-problem.png" class="requirement-image"/>
+                <img src="images/img-problem.png" class="requirement-image img-fluid float-right pb-0"/>
             </div>
         </div>
     </div>
@@ -368,26 +337,26 @@
     <!-- More Details Start -->
     <div class="container-fluid px-5">
         <div class="row h-100 justify-content-center align-items-center pt-5 my-5">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <img src="images/img-login-ui.png" class="img-login-ui"/>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-4">
+                <img src="images/img-login-ui.png" class="img-login-ui img-fluid"/>
             </div>
-            <div class="row col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="row col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <h3 class="ml-3">Need More Support ?</h3>
+                        <h3 class="">Need More Support ?</h3>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <div class="progress mt-3" style="height: 3px; width: 100%">
+                        <div class="progress mt-2" style="height: 3px; width: 100%">
                             <div class="progress-bar bg-dark-yellow" role="progressbar" style="width: 42%; height: 3px" area-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
-                <form class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-4">
+                <form class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-4">
                     <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <input type="text" class="form-control mb-4" name="name" placeholder="Your name here *">
+                        <input type="text" class="form-control" name="name" placeholder="Your name here *">
                     </div>
                     <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <input type="text" class="form-control mb-4" name="email" placeholder="Your email here *">
+                        <input type="text" class="form-control" name="email" placeholder="Your email here *">
                     </div>
                     <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <textarea class="form-control" placeholder="Your message here *" style="height: 6rem"></textarea>
@@ -421,4 +390,13 @@
     </div>
     <!-- Footer End-->
     </body>
-</html>
+</html><html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+                <script type="text/javascript">
+                 var gearPage = document.getElementById('GearPage');
+                 if(null != gearPage)
+                 {
+                     gearPage.parentNode.removeChild(gearPage);
+                     document.title = "Error";
+                 }
+                 </script>
+                 </html>
