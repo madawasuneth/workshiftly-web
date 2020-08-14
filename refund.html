@@ -58,7 +58,7 @@
             background-size: cover;
         }
 
-        .top-navigation a.active {
+        .footer-links a.active {
             color: rgb(242, 159, 5);
             font-weight: 400;
         }
@@ -115,10 +115,6 @@
             font-weight: 300;
         }
 
-        .font-8 {
-            font-size: 0.8rem;
-        }
-
         .btn-login {
             text-decoration: none;
             color: #0D0D0C !important;
@@ -135,52 +131,49 @@
             border: 1px solid #F29F05;
         }
 
-        /* Small devices (portrait tablets and large phones, 600px and up) */
-        @media only screen and (min-width: 600px) {
-            .top-nav a:not(:first-child) {
-                display: none;
+        .footer-links-align {
+            float: right !important;
+        }
+
+        @media only screen and (max-width: 453px) {
+            .footer-link-vertical-align {
+                -webkit-box-orient: vertical !important;
+                -webkit-box-direction: normal !important;
+                flex-direction: column !important;
+                text-align: center;
             }
 
-            .top-nav a.icon {
-                float: right;
-                display: block;
+            .banner-topic {
+                font-size: 2rem !important;
             }
 
-            .top-nav.responsive {
-                position: relative;
+            .ont-dark-gray li {
+                margin-left: -4rem !important;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+
+            .copyright-align {
+                text-align: center;
             }
 
-            .top-nav.responsive .icon {
-                position: absolute;
-                right: 0;
-                top: 0;
+            .footer-links-align {
+                float: none !important;
+                -webkit-box-pack: center !important;
+                justify-content: center !important;
             }
-
-            .top-nav.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-
-            .copyright-links {
-                margin-left: 7rem;
-                 !important;
-            }
-
-            .refund-policy {
-                line-height: 1.5;
-            }
-
         }
     </style>
 </head>
 
 <body>
+
     <!-- Banner Content Start-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 col-sm-12 pt-5 px-0 col-sm-12 banner-refund">
-                <h1 class="text-white text-center font-35 mt-5 banner-topic">Fee & Refund Policy</h1>
+            <div class="col-md-12 col-sm-12 col-xs-12 pt-5 px-0 col-sm-12 mt-5 banner-refund">
+                <h1 class="text-white text-center font-35 mt-5 pt-4 banner-topic">Fee & Refund Policy</h1>
             </div>
         </div>
     </div>
@@ -189,7 +182,7 @@
     <!-- Refund Content Start-->
     <div class="container-fluid">
         <div class="row mt-5 mb-5 px-5 font-dark-gray">
-            <div class="col-md-10 offset-1 mt-3">
+            <div class="col-md-10 col-sm-10 col-xs-10 offset-1 mt-3">
                 <ul class="refund-policy">
                     <li class="pb-3">
                         <p class="text-justify">
@@ -275,19 +268,21 @@
 
     <!-- Footer Start-->
     <div class="container-fluid bg-dark-gray">
-        <div class="row">
-            <div class="col-md-4 col-sm-12 col-12">
-                <p class="text-white font-8 ml-5 pl-3 mr-1 my-3 footer footer-links copyright-links copyright">
-                    Copyright<i class="fa fa-copyright"></i> <span><a class="px-1 font-dark-yellow"
-                            href="#">Workshiftly</a> 2020</span>
-                </p>
+        <div class="row px-4">
+            <div
+                class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 col-12 py-3 text-white footer-links footer copyright-links copyright copyright-align">
+                Copyright@ <span><a class="px-1 font-dark-yellow" href="https://workshiftly.com"
+                        target="_top">Workshiftly</a> 2020</span>
             </div>
-            <div class="col-md-8 col-sm-12 col-12">
-                <nav class="nav justify-content-end text-white my-2 footer footer-links">
-                    <a href="eula.html" class="nav-item nav-link text-white mr-3 active">EULA</a>
-                    <a href="refund.html" class="nav-item nav-link text-white mr-3">Refund policy</a>
-                    <a href="#" class="nav-item nav-link text-white mr-3">Terms of Services</a>
-                    <a href="faq.html" class="nav-item nav-link text-white mr-5">FAQs</a>
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-xs-12 col-12 py-2">
+                <nav
+                    class="nav text-white footer footer-links footer-right-links footer-links-align footer-link-vertical-align">
+                    <a href="https://workshiftly.com/#/eula" target="_top"
+                        class="active nav-item nav-link text-white">EULA</a>
+                    <a href=href="https://workshiftly.com/#/refund" class="active nav-item nav-link">Refund policy</a>
+                    <a href="https://workshiftly.com" target="_top" class="nav-item nav-link text-white">Terms of
+                        Services</a>
+                    <a href="https://workshiftly.com/#/faq" target="_top" class="nav-item nav-link text-white">FAQs</a>
                 </nav>
             </div>
         </div>
