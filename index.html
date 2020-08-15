@@ -129,7 +129,7 @@
         }
 
         .carousel-inner {
-            min-height: 26rem;
+            min-height: 20rem;
         }
 
         .carousel-caption p {
@@ -526,10 +526,18 @@
                 text-align: center;
             }
 
+            #follow-us-text-h5 {
+                display: none;
+            }
+
             .footer-links-align {
                 float: none !important;
                 -webkit-box-pack: center !important;
                 justify-content: center !important;
+            }
+
+            .carousel-inner {
+                min-height: 26rem;
             }
         }
 
@@ -1161,9 +1169,13 @@
             #ws-laptop {
                 display: none;
             }
+
+            .carousel-inner {
+                min-height: 22rem;
+            }
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 325px) {
             .feature-cards {
                 width: 18rem;
                 height: 16rem;
@@ -1176,6 +1188,10 @@
                 display: flex;
                 flex-direction: row;
                 margin-left: 4.5rem !important;
+            }
+
+            .carousel-inner {
+                min-height: 20rem;
             }
         }
 
@@ -1338,13 +1354,13 @@
 
             </div>
             <div class="col-md-5 col-sm-1 col-1 pr-0">
-                <div class="yellow-trapezoid-1 yellow-trapezoid-1-align float-right">
+                <div class="yellow-trapezoid-1 yellow-trapezoid-1-align float-right" style="padding-bottom: 16px;">
                     <img id="ws-laptop" src="images/laptop.png" class="img-laptop img-laptop-align text-right" />
                 </div>
             </div>
-            <div class="col-md-12 col-sm-12 col-12">
+            <!-- <div class="col-md-12 col-sm-12 col-12">
                 <div class="yellow-trapezoid-2 yellow-trapezoid-2-align"></div>
-            </div>
+            </div> -->
         </div>
 
     </div>
@@ -1445,7 +1461,8 @@
                             <img src="images/img-clock.png" class="ml-4 design-clock" />
                         </div>
                         <div class="col-md-3 col-sm-4 col-4" id="follow-us-text">
-                            <h5 class="text-white float-right ml-5 mt-4 pl-5 pt-5">Follow us on</h5>
+                            <h5 id="follow-us-text-h5" class="text-white float-right ml-5 mt-4 pl-5 pt-5">Follow us on
+                            </h5>
                         </div>
                         <div class="media-link-container mt-5 ml-4 pt-4 float-right">
                             <div>
