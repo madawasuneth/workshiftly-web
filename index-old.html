@@ -257,22 +257,13 @@
         .img-fbc:hover {
             content: url("images/img-fbc-color.png");
             display: block;
-            margin-left: 7.5rem;
             width: 72%;
             z-index: 100;
         }
 
-        .img-bpo:hover {
-            content: url("images/img-bpo-color.png");
+        .img-ceh:hover {
+            content: url("images/img-ceh-color.png");
             display: block;
-            width: 72%;
-            z-index: 100;
-        }
-
-        .img-it:hover {
-            content: url("images/img-it-color.png");
-            display: block;
-            margin-left: 4.75rem;
             width: 72%;
             z-index: 100;
         }
@@ -315,31 +306,9 @@
             height: 28.3rem;
         }
 
-        .social-media-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: inline;
-            float: right;
-        }
-
-        .social-media-links li {
-            font-size: 1.3rem;
+        .follow-social-media {
+            font-size: 1.5rem;
             color: #FFFFFF;
-            float: left;
-        }
-
-        .social-media-links a {
-            text-decoration: none;
-            font-size: 1.3rem;
-            color: #FFFFFF;
-            float: left;
-        }
-
-        .social-media-links a:hover {
-            text-decoration: none;
-            font-size: 1.3rem;
-            color: #F29F05;
         }
 
         .media-links i:hover {
@@ -909,15 +878,8 @@
                 z-index: 100;
             }
 
-            .img-bpo:hover {
-                content: url("images/img-bpo-color.png");
-                display: block;
-                width: 72%;
-                z-index: 100;
-            }
-
-            .img-it:hover {
-                content: url("images/img-it-color.png");
+            .img-ceh:hover {
+                content: url("images/img-ceh-color.png");
                 display: block;
                 width: 72%;
                 z-index: 100;
@@ -1119,24 +1081,14 @@
                 content: url("images/img-fbc-color.png");
                 display: block;
                 width: 72%;
-                padding-left: 3rem !important;
                 z-index: 100;
             }
 
-            .img-bpo:hover {
-                content: url("images/img-bpo-color.png");
+            .img-ceh:hover {
+                content: url("images/img-ceh-color.png");
                 display: block;
                 width: 72%;
                 z-index: 100;
-            }
-
-            .img-it:hover {
-                content: url("images/img-it-color.png");
-                display: block;
-                width: 90%;
-                padding-left: 3rem !important;
-                z-index: 100;
-                text-align: center !important;
             }
 
             /* --- Media Section Css --- */
@@ -1159,44 +1111,6 @@
                 background-size: cover !important;
                 height: 11rem;
                 margin-top: -3rem !important;
-            }
-
-            .media-links i {
-                font-size: 1rem;
-                float: left !important;
-
-            }
-
-            .design-grey h5 {
-                font-size: 1rem;
-                padding-left: 0px;
-                margin-top: -4.3rem !important;
-                float: left !important;
-                margin-left: 0 !important;
-            }
-
-            .xs-t-0 {
-                padding-top: 0 !important;
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-                margin-top: 0 !important;
-            }
-
-            .xs-x-2 {
-                padding-left: 6px !important;
-                padding-right: 6px !important;
-            }
-
-            .xs-x-2-last {
-                padding-left: 6px !important;
-                padding-right: 0px !important;
-            }
-
-            .social-media-links li a {
-                text-decoration: none;
-                font-size: 1rem;
-                color: #FFFFFF;
-                float: left;
             }
 
             .media-link-items {
@@ -1235,19 +1149,6 @@
                 flex-direction: column !important;
                 text-align: center;
             }
-
-            .media-links i {
-                font-size: 1rem;
-                float: left !important;
-
-            }
-
-            .design-grey h5 {
-                font-size: 1rem;
-                margin-top: -4.5rem !important;
-                margin-left: -5rem !important;
-                padding-left: 0px;
-            }
         }
 
         @media (max-width: 425px) and (min-width: 376px) {
@@ -1262,8 +1163,6 @@
                 border-radius: 1.5rem;
                 margin-left: 0rem !important;
             }
-
-
         }
 
         @media (max-width: 425px) {
@@ -1284,9 +1183,6 @@
             .carousel-inner {
                 min-height: 22rem;
             }
-
-
-
         }
 
         @media (max-width: 375px) {
@@ -1344,7 +1240,9 @@
         @media (min-width: 1200px) { ... }
 
         ======== */
-        .client-logos {}
+        .client-logos {
+            margin-left: 1.0rem !important
+        }
     </style>
 </head>
 
@@ -1570,20 +1468,19 @@
             </div>
         </div>
         <div class="row pt-5">
-            <div class="col-md-4 col-sm-4 col-xs-4 col-4 text-center">
-                <img src="images/img-it-grey.png" class="img-it" style="width: 68%;" />
+            <div class="col-md-3 col-sm-1 col-1"></div>
+            <div class="col-md-3 col-sm-5 col-4 ml-5 client-logos">
+                <img src="images/img-fbc-grey.png" class="img-fbc" style="width: 72%" />
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-4 col-4 text-center">
-                <img src="images/img-fbc-grey.png" class="img-fbc" style="width: 46%" />
+            <div class="col-md-3 col-sm-5 col-4 ml-5 client-logos">
+                <img src="images/img-ceh-grey.png" class="img-ceh" style="width: 47%" />
             </div>
-            <div class="col-md-4 col-sm-4 col-4 col-xs-4 text-center">
-                <img src="images/img-bpo-grey.png" class="img-bpo" style="width: 78%" />
-            </div>
+            <div class="col-md-3 col-sm-1 col-1"></div>
         </div>
     </div>
     <!--Section 5 Our Clients Container End-->
 
-    <!--Section 6 Media Container Start-->
+    <!--Section 4 Media Container Start-->
     <div class="container-fluid px-0 pt-5">
         <div class="row pt-5">
             <div class="col-md-12 col-sm-12 col-12 design-yellow"></div>
@@ -1598,17 +1495,17 @@
                             </h5>
                         </div>
                         <div class="media-link-container sc-media-container mt-5 ml-4 pt-4 float-right">
-                            <div class="social-media-links">
+                            <div>
                                 <a href="https://www.facebook.com/Workshiftly-632185054076054">
                                     <i class="fa fa-facebook follow-social-media" aria-hidden="true"></i>
                                 </a>
                             </div>
-                            <div class="social-media-links" style="margin-left: 10px">
+                            <div style="margin-left: 10px">
                                 <a href="">
                                     <i class="fa fa-instagram follow-social-media" aria-hidden="true"></i>
                                 </a>
                             </div>
-                            <div class="social-media-links" style="margin-left: 10px">
+                            <div style="margin-left: 10px">
                                 <a href="https://www.linkedin.com/company/workshiftly/?viewAsMember=true">
                                     <i class="fa fa-linkedin follow-social-media" aria-hidden="true"></i>
                                 </a>
